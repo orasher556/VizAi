@@ -1,0 +1,24 @@
+default:
+  table_configs:
+    - table_name: scans_and_viz_results_de
+      hashed_columns:
+        - study_uid
+        - first_acquired
+        - patient_first_acquired
+        - patient
+    - table_name: users_de
+      hashed_columns:
+        - name
+        - address
+        - user_uid
+    - table_name: notifications_de
+      hashed_columns:
+        - study_uid
+        - patient
+        - users
+development:
+  source_db_cs: "sqlite:///./db/source_db.db"
+  dest_db_cs: "sqlite:///./db/dest_db.db"
+production:
+  source_db_cs: "sqlite:///./db/source_db.db"
+  dest_db_cs: "sqlite:///./db/dest_db.db"
